@@ -9,6 +9,7 @@ class CategorySerializer(ModelSerializer):
 
 
 class BlogSerializer(ModelSerializer):
+    author=serializers.StringRelatedField(read_only=True)
     class Meta:
         model=Blog
-        fields='__all__'
+        exclude=['category']
