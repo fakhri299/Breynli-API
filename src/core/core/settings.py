@@ -38,17 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ckeditor',
-    'djrichtextfield',
+    
 
     #apps
     'blogs.apps.BlogsConfig',
 
 
     #3rd library
-    
     'rest_framework',
-    'django_extensions'
+    'django_extensions',
+    'django_filters',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +139,10 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR)
 
 
+REST_FRAMEWORK = {
+    
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+    
+}
