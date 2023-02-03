@@ -14,3 +14,9 @@ class BlogSerializer(ModelSerializer):
     class Meta:
         model=Blog
         fields= ['title','description','body','created_date','image','author','category']
+
+
+class ContactSerializer(ModelSerializer):
+    class Meta:
+        model=Contact
+        fields=['title','description']

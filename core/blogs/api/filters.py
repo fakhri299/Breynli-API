@@ -4,10 +4,11 @@ from blogs.models import Blog,Category
 
 class BlogFilter(FilterSet):
     class Meta:
-        model=Blog
-        fields={
+        model = Blog
+        fields = {
+            'title': ['exact', 'icontains'],
+            'description': ['exact', 'icontains'],
+            'category': ['exact'],
+            'author': ['exact'],
             
-        'category':['exact'], 
-        
         }
-
