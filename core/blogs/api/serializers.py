@@ -19,4 +19,4 @@ class BlogSerializer(ModelSerializer):
 class ContactSerializer(ModelSerializer):
     class Meta:
         model=Contact
-        fields=['title','description']
+        fields=['title','subject']
