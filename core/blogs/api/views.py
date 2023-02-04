@@ -3,7 +3,8 @@ from blogs.models import *
 from blogs.api.serializers import *
 from django_filters.rest_framework import DjangoFilterBackend
 from.filters import BlogFilter
-from rest_framework.filters import SearchFilter
+
+
 
 
 class CategoryApiView(ListAPIView):
@@ -16,6 +17,7 @@ class BlogApiView(ListAPIView):
     queryset=Blog.objects.all()
     filter_backends=[DjangoFilterBackend]
     filterset_class=BlogFilter
+    
 
 
 
@@ -27,5 +29,12 @@ class BlogDetailApiView(RetrieveAPIView):
 class ContactApiView(CreateAPIView):
     serializer_class=ContactSerializer
     queryset=Contact.objects.all()
+    
+
+
+class ConsultantApiView(CreateAPIView):
+    serializer_class=ConsultantSerializer
+    queryset=Consultant.objects.all()
+    
 
 

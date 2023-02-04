@@ -20,3 +20,9 @@ class ContactSerializer(ModelSerializer):
     class Meta:
         model=Contact
         fields=['title','subject']
+
+
+class ConsultantSerializer(ModelSerializer):
+    class Meta:
+        model=Consultant
+        fields=['fullname','email','message']
