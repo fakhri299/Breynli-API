@@ -19,7 +19,7 @@ class BlogSerializer(ModelSerializer):
 class ContactSerializer(ModelSerializer):
     class Meta:
         model=Contact
-        fields=['title','subject']
+        fields=['fullname','email','number','title','subject']
 
 
 class ConsultantSerializer(ModelSerializer):
