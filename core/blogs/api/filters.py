@@ -7,7 +7,7 @@ class BlogFilter(FilterSet):
         model = Blog
         fields = {
             'title': ['exact', ],
-            'description': ['exact'],
+            'description': ['exact',],
             'category__name': ['exact'],
             'author': ['exact'],
             
