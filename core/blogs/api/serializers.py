@@ -25,4 +25,4 @@ class ContactSerializer(ModelSerializer):
 class ConsultantSerializer(ModelSerializer):
     class Meta:
         model=Consultant
-        fields=['fullname','email','message']
+        fields=['id','fullname','email','message']

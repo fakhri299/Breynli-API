@@ -43,6 +43,6 @@ class Consultant(models.Model):
     message=models.TextField()
 
     def __str__(self):
-        return self.fullname
+        return f'{self.fullname}'
 
 

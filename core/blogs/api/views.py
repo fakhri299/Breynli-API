@@ -1,4 +1,4 @@
-from rest_framework.generics import CreateAPIView,RetrieveAPIView,ListAPIView
+from rest_framework.generics import CreateAPIView,RetrieveAPIView,ListAPIView,ListCreateAPIView
 from blogs.models import *
 from blogs.api.serializers import *
 from django_filters.rest_framework import DjangoFilterBackend
@@ -32,7 +32,7 @@ class ContactApiView(CreateAPIView):
     
 
 
-class ConsultantApiView(CreateAPIView):
+class ConsultantApiView(ListCreateAPIView):
     serializer_class=ConsultantSerializer
     queryset=Consultant.objects.all()
     
